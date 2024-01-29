@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --Dark--cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Very--darkblue: hsl(212, 21%, 14%);
+    --Dark--grayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+    --ff:'Fraunces', serif;
+
+    
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Cream);
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+    grid-template-rows: 25px 1fr 25px;
+}
+
+
+.card{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    height: max-content;
+    border-radius: 10px;
+    background-color: var(--White);
+}
+
+.card__img{
+    width: 100%;
+    border-radius:  10px 10px 0 0;
+}
+
+.card__texts{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card__title{
+    margin-top: .8rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--Dark--cyan);
+}
+.card__title--1{
+    font-family: var(--ff);
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--Very--darkblue);
+}
+.card__paragraph{
+    font-size: .9rem;
+    line-height: 1.3rem;
+    color: var(--Dark--cyan);
+}
+.card__presios{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--Dark--cyan);
+    margin-top: 7px;
+}
+.card__presio--1{
+    font-size: 2rem;
+    font-family: var(--ff);
+    font-weight: 500;
+}
+.card__presio--2{
+    text-decoration: line-through;
+    font-size: .8rem;
+}
+
+.card__cta{
+    /* outline: 3px solid #000; */
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--Dark--cyan);
+    color: var(--White);
+    font-size: .8rem;
+    border-radius: 10px;
+    margin: .5rem;
+    
+}
+.card__icon{
+    /* outline: 1px solid #000; */
+    display: inline-flex;
+    margin:  auto 5px;
+
+}
+.card__cta:hover{
+    background-color: var(--Very--darkblue);
+}
+
+
+@media (min-width:768px) {
+    
+    body{
+        grid-template-columns: 1fr 250px 250px 1fr ;
+        grid-template-rows: 100px 1fr 100px;
+    }
+    
+    .card{
+        grid-column: 2/4;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+    }
+    .card__picture{
+        grid-column: 1/2;
+        grid-row: 1/-1;
+        background-image: url(./images/image-product-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .card__img{
+     display: none;   
+    }
+
+    .card__texts{
+        grid-column: 2/-1;
+        grid-row: 1/-1;
+        padding: 10px;
+        /* outline: auto; */
+    }
+    .card__cta{
+        margin: unset;
+        margin-bottom: 1.3rem;
+        margin-top: .8rem;
+
+        padding: .6rem;
+        width: 100%;
+        
+    }
+
+
+
+}
+
+
+
+
